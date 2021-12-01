@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import utils
 
 st.title("Chatbot")
 
@@ -38,3 +39,7 @@ if user_input:
 
     st.text_area("Bot:", value=output['generated_text'], height=200, max_chars=None, key=None)
 
+    level = utils.predict(user_input)
+
+    if level == 'Sucide':
+        st.warning('You are in danger of depression, please take care of yourself')
