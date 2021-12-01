@@ -2,4 +2,3 @@ tensorflow
 streamlit
 numpy
 requests
-sentencepiece
